@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="669.0" prefWidth="777.0" style="-fx-background-color: #2C394B;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sec.ThreeController">
+   <children>
+      <HBox layoutX="-1.0" layoutY="322.0" prefHeight="260.0" prefWidth="784.0" style="-fx-background-color: #082032; -fx-opacity: 50%;" />
+      <Button fx:id="back" layoutX="14.0" layoutY="592.0" mnemonicParsing="false" onAction="#back" text="Back">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Button>
+      <Button fx:id="dec" layoutX="559.0" layoutY="592.0" mnemonicParsing="false" onAction="#decrypt" text="Decryption">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Button>
+      <Button fx:id="enc" layoutX="325.0" layoutY="592.0" mnemonicParsing="false" onAction="#encrypt" text="Encryption">
+         <font>
+            <Font name="Times New Roman Bold" size="35.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="output" layoutX="137.0" layoutY="519.0" prefHeight="47.0" prefWidth="530.0" />
+      <TextField fx:id="input" layoutX="127.0" layoutY="264.0" prefHeight="47.0" prefWidth="530.0" />
+      <TextArea fx:id="ouputchars" layoutX="130.0" layoutY="393.0" prefHeight="48.0" prefWidth="530.0" />
+      <Label layoutX="130.0" layoutY="212.0" text="Message " textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="462.0" layoutY="105.0" text="Key in chars" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="332.0" text="Output in characters" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="138.0" layoutY="464.0" text="Output in numbers" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="38.0" />
+         </font>
+      </Label>
+      <HBox layoutX="-1.0" prefHeight="78.0" prefWidth="784.0" style="-fx-background-color: #082032;" />
+      <Label layoutX="215.0" layoutY="1.0" text="Hill Cipher" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="64.0" />
+         </font>
+      </Label>
+      <TextField fx:id="k" layoutX="130.0" layoutY="155.0" prefHeight="47.0" prefWidth="530.0" />
+      <Label layoutX="158.0" layoutY="105.0" text="Key in numbers" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="38.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="kn" layoutX="128.0" layoutY="116.0" mnemonicParsing="false" onAction="#select">
+         <toggleGroup>
+            <ToggleGroup fx:id="keyss" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="kc" layoutX="431.0" layoutY="116.0" mnemonicParsing="false" onAction="#select" toggleGroup="$keyss" />
+   </children>
+</AnchorPane>
